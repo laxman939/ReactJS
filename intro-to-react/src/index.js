@@ -5,33 +5,24 @@ const indirectColor = {
   color: "red",
   fontSize: "20px",
 };
-//Can Update values
+//Can Update style object values
 indirectColor.color = "green";
 
 //const date = new Date(2021, 10, 30, 13);for custom hours
 const date = new Date();
-const hours = date.getHours();
-//console.log(hours);
+const hour = date.getHours();
+//console.log(hour);
 
 let greet;
 
-const styleToGreet = {
-  color: "black",
-};
+let caption = document.createElement("figcaption");
 
-if (hours < 12) {
-  greet = "Good Morning";
-  styleToGreet.color = "#e979ed";
-} else if (hours < 18) {
-  greet = "Good Everning";
-  styleToGreet.color = "#9de310";
-} else {
-  greet = "Good Night";
-  styleToGreet.color = "blue";
-}
+let images = document.createElement("img");
 
+//Main
 ReactDOM.render(
   <div>
+    {/* Inline Styles */}
     <div className="App">
       <h2 style={{ fontSize: "30px" }}>
         Inline Styling can be done in two ways
@@ -41,14 +32,44 @@ ReactDOM.render(
         <li style={indirectColor}>Indirect insertion</li>
       </ol>
     </div>
+    {/* For Wishes with Images */}
     <div>
-      <p style={{ fontSize: "30px", fontWeight: "bold" }}>
-        Showing Greetings Based on Timings
-      </p>
-      <h1 className="heading" style={styleToGreet}>
-        {greet}
-      </h1>
+      <h1>Showing Greetings with Gifs</h1>
     </div>
   </div>,
   document.getElementById("root")
 );
+
+if (hour < 12) {
+  //To display image
+  images.src =
+    "https://c.tenor.com/F2Cau0TY6NIAAAAM/donald-duck-good-morning.gif";
+  document.getElementById("root").appendChild(images);
+
+  //To Display Wishes
+  greet = "Good Morning";
+  caption.innerText = greet;
+  document.getElementById("root").appendChild(caption);
+} else if (hour < 18) {
+  //To display image
+  images.src =
+    "https://www.gifimages.pics/images/quotes/english/general/good-evening-gif-download-52650-298226.gif";
+  document.getElementById("root").appendChild(images);
+
+  //To Display Wishes
+  greet = "Good Evening";
+  caption.innerText = greet;
+  document.getElementById("root").appendChild(caption);
+} else {
+  //To display images
+  images.src = "https://c.tenor.com/491SUV9jbVEAAAAM/dog-good-night.gif";
+  document.getElementById("root").appendChild(images);
+
+  //To Display Wishes
+  greet = "Good Night";
+  caption.innerText = greet;
+  //styleToGreet.color = "green";-->Not working
+  document.getElementById("root").appendChild(caption);
+}
+
+console.log(greet);
