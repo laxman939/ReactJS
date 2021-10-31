@@ -9,7 +9,7 @@ const indirectColor = {
 indirectColor.color = "green";
 
 //const date = new Date(2021, 10, 30, 13);for custom hours
-const date = new Date();
+const date = new Date(2021, 10, 30, 11);
 const hour = date.getHours();
 //console.log(hour);
 
@@ -49,6 +49,7 @@ if (hour < 12) {
   //To Display Wishes
   greet = "Good Morning";
   caption.innerText = greet;
+  caption.style.color = "orange";
   document.getElementById("root").appendChild(caption);
 } else if (hour < 18) {
   //To display image
@@ -59,6 +60,7 @@ if (hour < 12) {
   //To Display Wishes
   greet = "Good Evening";
   caption.innerText = greet;
+  caption.style.color = "green";
   document.getElementById("root").appendChild(caption);
 } else {
   //To display images
@@ -68,6 +70,7 @@ if (hour < 12) {
   //To Display Wishes
   greet = "Good Night";
   caption.innerText = greet;
+  caption.style.color = "blue";
   //styleToGreet.color = "green";-->Not working
   document.getElementById("root").appendChild(caption);
 }
