@@ -1,0 +1,9 @@
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+figcaption {
+    font-size: 30px;
+    font-weight: Bold;
+  }
