@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./card";
+import Card from "./components/card";
 //data can import and use from contacts file, This way {name={cont[0].name}}
 
 function App() {
