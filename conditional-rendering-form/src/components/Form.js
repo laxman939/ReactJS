@@ -16,4 +16,5 @@ function Form(props) {
 
 export default Form;
 //props.isRegister === false ==>!props.isRegister
-//Used AND operator
+//Used AND operator to display confirm password
+//Ternary operator to display Login and Register texts
