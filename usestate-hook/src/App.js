@@ -4,30 +4,53 @@ import React, { useState } from "react";
 
 function App() {
   //Destructuring
-  const [count, setCount] = useState(0);
+  const [countLikes, setCountLikes] = useState(0);
+  const [countDislikes, setCountDislikes] = useState(0);
   //console.log(count);--[0, ƒ bound dispatchAction()]-->[initialValue, function]
 
   function increase() {
-    setCount(count + 1);
+    setCountLikes(countLikes + 1);
     //console.log("clicked");
   }
 
   function decrease() {
-    setCount(count - 1);
+    setCountDislikes(countDislikes + 1);
   }
 
   function reset(initialValue) {
     initialValue = 0;
-    setCount(initialValue);
+    setCountLikes(initialValue);
+    setCountDislikes(initialValue);
     //console.log(initialValue);
   }
 
+  //To display Time
+  let now = new Date().toLocaleTimeString();
+
+  const [time, setTime] = useState(now);
+
+  setInterval(getTime, 1000);
+
+  function getTime() {
+    let time = new Date().toLocaleTimeString();
+    setTime(time);
+  }
+
   return (
-    <div className="container">
-      <h1>{count}</h1>
-      <button onClick={increase}>+</button>
-      <button onClick={decrease}>-</button>
-      <button onClick={reset}>Reset</button>
+    <div>
+      <div className="container">
+        <h1>To Change Count</h1>
+        <h2>{"Likes " + countLikes}</h2>
+        <h2>{"Dislikes " + countDislikes}</h2>
+        <button onClick={increase}>Likes</button>
+        <button onClick={decrease}>Dislikes</button>
+        <button onClick={reset}>Reset</button>
+      </div>
+      <div className="container">
+        <h1>To Display Time</h1>
+        <h2>{time}</h2>
+        <button onClick={getTime}>Get Time</button>
+      </div>
     </div>
   );
 }

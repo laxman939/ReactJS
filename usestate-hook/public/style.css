@@ -1,29 +1,27 @@
 body {
-    font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+    text-align: center;
     color: #fff;
-    padding: 50px;
+    padding: 40px;
     width: 300px;
-    margin: 0 auto;
     background-color: #374954;
+    margin-left: 150px;
   }
-  
-  h1 {
-    font-size: 100px;
+  h1{
+    color: rgb(241, 241, 58);
   }
-  
-  .container {
-    margin: 60% auto;
+  h2{
+    font-size: 30px;
   }
   
   button {
-    display: flex;
+    display: inline-block;
     justify-content: space-around;
     background-color: #6bbe92;
-    border: 0;
-    width: 145px;
-    margin: 5px;
+    width: 200px;
+    margin: 10px;
     text-align: center;
     color: #fff;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
+    border-radius: 10px;
   }
