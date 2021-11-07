@@ -1,8 +1,29 @@
 import React, { useState } from "react";
+import cars from "./components/destructuring";
 
 //useState() is a Hook used to change or update the state(variable)
 
+//3--Destructuring ES-6 Concept
+console.log(cars); //Array of objects
+
+//Destructuring in arrays--> []
+const [honda, tesla] = cars; //Direct Rename simple in array drestructuring
+console.log(honda); //an object with nested array and nested object
+
+//Destructuring in objects --> {}
+const {
+  coloursByPopularity: [hondaTopColor],
+  speedStats: { topSpeed: hondaTopSpeed },
+} = honda;
+console.log(hondaTopColor);
+
+const {
+  coloursByPopularity: [teslaTopColor],
+  speedStats: { topSpeed: teslaTopSpeed },
+} = tesla;
+console.log(teslaTopSpeed);
 function App() {
+  //1-Counter Update
   //Destructuring
   const [countLikes, setCountLikes] = useState(0);
   const [countDislikes, setCountDislikes] = useState(0);
@@ -24,7 +45,7 @@ function App() {
   //   //console.log(initialValue);
   // }
 
-  //To display Time
+  //2-To display Time
   let now = new Date().toLocaleTimeString();
 
   const [time, setTime] = useState(now);
@@ -50,6 +71,26 @@ function App() {
         <h1>To Display Time</h1>
         <h2>{time}</h2>
         <button onClick={getTime}>Get Time</button>
+      </div>
+      <div>
+        <h1>Destructuring in ES-6</h1>
+        <table className="styling-table">
+          <tr>
+            <th>Brand</th>
+            <th>Top Speed</th>
+            <th>Top Color</th>
+          </tr>
+          <tr>
+            <td>{tesla.model}</td>
+            <td>{teslaTopSpeed}</td>
+            <td>{teslaTopColor}</td>
+          </tr>
+          <tr>
+            <td>{honda.model}</td>
+            <td>{hondaTopSpeed}</td>
+            <td>{hondaTopColor}</td>
+          </tr>
+        </table>
       </div>
     </div>
   );

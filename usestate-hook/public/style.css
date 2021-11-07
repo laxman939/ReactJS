@@ -2,9 +2,9 @@ body {
     text-align: center;
     color: #fff;
     padding: 40px;
-    width: 300px;
+    width: 400px;
     background-color: #374954;
-    margin-left: 150px;
+    margin-left: 200px;
   }
   h1{
     color: rgb(241, 241, 58);
@@ -24,4 +24,11 @@ body {
     font-weight: bold;
     font-size: 30px;
     border-radius: 10px;
+  }
+  .styling-table{
+    font-size: 20px;
+    color: rgb(117, 156, 196);
+    margin-left: 0px;
+    padding: 30px;
+    width: 400px;
   }
