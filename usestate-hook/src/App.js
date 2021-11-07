@@ -17,12 +17,12 @@ function App() {
     setCountDislikes(countDislikes + 1);
   }
 
-  function reset(initialValue) {
-    initialValue = 0;
-    setCountLikes(initialValue);
-    setCountDislikes(initialValue);
-    //console.log(initialValue);
-  }
+  // function reset(initialValue) {
+  //   initialValue = 0;
+  //   setCountLikes(initialValue);
+  //   setCountDislikes(initialValue);
+  //   //console.log(initialValue);
+  // }
 
   //To display Time
   let now = new Date().toLocaleTimeString();
@@ -42,9 +42,9 @@ function App() {
         <h1>To Change Count</h1>
         <h2>{"Likes " + countLikes}</h2>
         <h2>{"Dislikes " + countDislikes}</h2>
-        <button onClick={increase}>Likes</button>
-        <button onClick={decrease}>Dislikes</button>
-        <button onClick={reset}>Reset</button>
+        <button onClick={increase}>Like</button>
+        <button onClick={decrease}>Dislike</button>
+        {/* <button onClick={reset}>Reset</button> */}
       </div>
       <div className="container">
         <h1>To Display Time</h1>
