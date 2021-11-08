@@ -32,9 +32,9 @@ body {
     padding: 30px;
     width: 400px;
   }
-  #name{
+  #name, #email{
     width: auto;
-    height: 40px;
+    height: 30px;
     border-radius: 10px;
     background-color: lemonchiffon;
     font-size: large;
@@ -43,4 +43,7 @@ body {
   #event-btn{
     width: 130px;
     padding: 2px;
+  }
+  label {
+    font-size: larger;
   }
