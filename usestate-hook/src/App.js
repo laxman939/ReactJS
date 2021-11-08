@@ -22,6 +22,7 @@ const {
   speedStats: { topSpeed: teslaTopSpeed },
 } = tesla;
 console.log(teslaTopSpeed);
+
 function App() {
   //1-Counter Update
   //Destructuring
@@ -55,6 +56,22 @@ function App() {
   function getTime() {
     let time = new Date().toLocaleTimeString();
     setTime(time);
+  }
+
+  //4-Event Handling in React
+  const [heading, setHeading] = useState("Hello I will Change");
+  const [isMousedOver, setMousedOver] = useState(false);
+  function handleClick() {
+    setHeading("Submitted");
+  }
+
+  function handleMouseOver() {
+    setMousedOver(true);
+    //console.log("moused over");
+  }
+  function handleMouseOut() {
+    setMousedOver(false);
+    //console.log("moused out");
   }
 
   return (
@@ -91,6 +108,20 @@ function App() {
             <td>{hondaTopColor}</td>
           </tr>
         </table>
+      </div>
+      <div>
+        <h1>Event Handling in React</h1>
+        <h2>{heading}</h2>
+        <input id="name" type="text" placeholder="What is your name?" />
+        <button
+          id="event-btn"
+          onClick={handleClick}
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+          style={{ backgroundColor: isMousedOver ? "#6ca66a" : "#a69b7e" }}
+        >
+          Submit
+        </button>
       </div>
     </div>
   );

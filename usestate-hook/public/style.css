@@ -32,3 +32,15 @@ body {
     padding: 30px;
     width: 400px;
   }
+  #name{
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    background-color: lemonchiffon;
+    font-size: large;
+    padding-left: 10px;
+  }
+  #event-btn{
+    width: 130px;
+    padding: 2px;
+  }
