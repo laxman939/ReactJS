@@ -112,7 +112,16 @@ function App() {
       <div>
         <h1>Event Handling in React</h1>
         <h2>{heading}</h2>
-        <input id="name" type="text" placeholder="What is your name?" />
+        <label for="name">
+          Name:
+          <input id="email" type="email" placeholder="Enter your email" />
+        </label>
+        <br />
+        <label for="email">
+          Email:
+          <input id="name" type="text" placeholder="What is your name?" />
+        </label>
+
         <button
           id="event-btn"
           onClick={handleClick}
@@ -122,6 +131,10 @@ function App() {
         >
           Submit
         </button>
+        <br />
+        <small>
+          Click on name label it direct you to the name input element
+        </small>
       </div>
     </div>
   );
@@ -134,3 +147,7 @@ export default App;
 console.log(red);     */
 
 //Button--calls function(increment)--calls setCount--updates useState --useState updates count
+
+//label
+/*Use Of label Tags --> When we click on label name it directs us to that name input text
+ label for name is id of the input element    */
