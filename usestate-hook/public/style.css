@@ -2,7 +2,7 @@ body {
     text-align: center;
     color: #fff;
     padding: 40px;
-    width: 400px;
+    width: 450px;
     background-color: #374954;
     margin-left: 200px;
   }
@@ -17,7 +17,7 @@ body {
     display: inline-block;
     justify-content: space-around;
     background-color: #6bbe92;
-    width: 200px;
+    width: 150px;
     margin: 10px;
     text-align: center;
     color: #fff;
@@ -32,7 +32,7 @@ body {
     padding: 30px;
     width: 400px;
   }
-  #name, #email{
+  #name, #email, #text-id{
     width: auto;
     height: 30px;
     border-radius: 10px;

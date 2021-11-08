@@ -34,9 +34,11 @@ function SimpleForm() {
   return (
     <div>
       {/* {isClicked ? <h1>Hello {name}</h1> : <h1>Simple Form</h1>} --> Using Ternary Operator*/}
-      <h1>Hello {userName}!</h1>
+      <h1>Displaying User Entered Data</h1>
+      <h2>Hello {userName}!</h2>
       <form onSubmit={handleClickEvent}>
         <input
+          id="text-id"
           onChange={handleChange}
           type="text"
           placeholder="What's your name?"

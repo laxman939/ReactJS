@@ -26,11 +26,12 @@ function EventHandler() {
         <input id="email" type="email" placeholder="Enter your email" />
       </label>
       <br />
+      <br />
       <label htmlFor="email">
         Email:
         <input id="name" type="text" placeholder="What is your name?" />
       </label>
-
+      <br />
       <button
         id="event-btn"
         onClick={handleClick}
