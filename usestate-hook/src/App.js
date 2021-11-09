@@ -5,6 +5,7 @@ import EventHandler from "./components/eventHandling";
 import Destructure from "./components/Destructure/Destrucure";
 import SimpleForm from "./components/SimpleForm";
 import TwoInputForm from "./components/TwoInputForm";
+import ThreeInputForm from "./components/ThreeInputForm";
 
 //useState() is a Hook used to change or update the state(variable)
 
@@ -17,6 +18,7 @@ function App() {
       <EventHandler />
       <SimpleForm />
       <TwoInputForm />
+      <ThreeInputForm />
     </div>
   );
 }
