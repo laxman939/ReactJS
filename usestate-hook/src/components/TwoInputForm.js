@@ -7,6 +7,11 @@ function TwoInputForm() {
     lName: "",
   });
 
+  const [name, setName] = useState({
+    first: "",
+    last: "",
+  });
+
   function handleChange(event) {
     // const value = event.target.value;
     // const name = event.target.name;
@@ -39,13 +44,23 @@ function TwoInputForm() {
     });
   }
 
+  function handleSubmit(event) {
+    setName({
+      first: fullName.fName,
+      last: fullName.lName,
+    });
+
+    event.preventDefault(); //preventing form default browsing(refreshing)
+  }
+
   return (
     <div className="container">
       <h1>Displaying User Entered data from two Input Elements</h1>
       <h2>
-        Hello {fullName.fName} {fullName.lName}!
+        {/* displaying through handleSubmit function */}
+        Hello {name.first} {name.last}!
       </h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
           name="fName"
@@ -60,7 +75,7 @@ function TwoInputForm() {
           placeholder="Enter your Last Name"
         />
         <br />
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
