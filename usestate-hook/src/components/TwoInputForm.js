@@ -87,3 +87,5 @@ export default TwoInputForm;
 //10 and 25 lines
 //when we start typing -- handleChange--pass event-- stores new value and value of name attr
 //then calls setFullName fun and stores prevValue
+
+//It is controlled component-- controlling form inputs using state with the help of handlechange and handlesubmit functions
