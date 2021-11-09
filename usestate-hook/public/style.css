@@ -32,7 +32,7 @@ body {
     padding: 30px;
     width: 400px;
   }
-  #name, #email, #text-id{
+  input{
     width: auto;
     height: 30px;
     border-radius: 10px;
