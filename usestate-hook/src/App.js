@@ -6,6 +6,7 @@ import Destructure from "./components/Destructure/Destrucure";
 import SimpleForm from "./components/SimpleForm";
 import TwoInputForm from "./components/TwoInputForm";
 import ThreeInputForm from "./components/ThreeInputForm";
+import ThreeInputSpread from "./components/ThreeFormSpread"; //Simplyfying code using spread operator
 
 //useState() is a Hook used to change or update the state(variable)
 
@@ -19,6 +20,7 @@ function App() {
       <SimpleForm />
       <TwoInputForm />
       <ThreeInputForm />
+      <ThreeInputSpread />
     </div>
   );
 }
