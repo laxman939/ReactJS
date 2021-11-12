@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ToDoItem(props) {
+  const [isClicked, setClicked] = useState(false);
+
+  //For striking the item(important--revise)
+  function isStriked() {
+    setClicked((prevValue) => {
+      return !prevValue;
+    });
+  }
+
   return (
     // <div onClick={props.onChange(props.id)}> --Immidiately calls the function and displays index value
     <div
-      onClick={() => {
+      onClick={isStriked}
+      onDoubleClick={() => {
         props.onDelete(props.id); //Don't display index value
       }}
     >
-      <li>{props.text}</li>
+      <li style={{ textDecoration: isClicked ? "line-through" : "none" }}>
+        {props.text}
+      </li>
     </div>
   );
 }
