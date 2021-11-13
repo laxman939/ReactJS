@@ -25,12 +25,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>Simple To-Do List</h1>
-
+    <div className="container">
+      <div className="heading">
+        <h1>Simple To-Do List</h1>
+      </div>
+      <InputArea onAdd={addItem} />
       <div>
         <h2>To-Do Items</h2>
-        <InputArea onAdd={addItem} />
         <ul>
           {showItems.map((eachItem, index) => (
             <ToDoItem
