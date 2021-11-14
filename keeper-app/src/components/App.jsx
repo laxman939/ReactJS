@@ -17,11 +17,33 @@ function App() {
       return [...prevNotes, notes]; //To display previousnotes
     });
   }
+
+  //To delete selected item
+  function deleteItem(id) {
+    //console.log("Deleted");
+
+    setShowNotes((prevNotes) => {
+      return prevNotes.filter((item, index) => {
+        return index !== id; //receive id from map method
+      });
+    });
+  }
+
   return (
     <div>
       <Header />
       <CreateNote onAdd={addNote} />
-      <ShowNote />
+      {showNotes.map((eachNote, index) => {
+        return (
+          <ShowNote
+            key={index}
+            id={index}
+            title={eachNote.title}
+            cont={eachNote.content}
+            onDelete={deleteItem}
+          />
+        );
+      })}
       <Footer />
     </div>
   );
