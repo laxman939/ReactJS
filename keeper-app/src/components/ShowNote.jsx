@@ -1,5 +1,7 @@
 import React from "react";
 
+import DeleteIcon from "@mui/icons-material/Delete";
+
 function ShowNote(props) {
   //received id from app through props and again passing to delete function in app
   function handleClick() {
@@ -10,7 +12,9 @@ function ShowNote(props) {
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.cont}</p>
-      <button onClick={handleClick}>Delete</button>
+      <button onClick={handleClick}>
+        <DeleteIcon />
+      </button>
     </div>
   );
 }

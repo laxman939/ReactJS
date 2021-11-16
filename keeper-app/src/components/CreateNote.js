@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 
+import AddIcon from "@mui/icons-material/Add";
+import Fab from "@mui/material/Fab";
+import Zoom from "@mui/material/Zoom";
+
 function CreateNote(props) {
   const [notes, setNotes] = useState({
     title: "",
     content: "",
   });
+
+  const [isExpand, setExpand] = useState(false);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -24,25 +30,37 @@ function CreateNote(props) {
     });
 
     event.preventDefault(); //To prevent default browsing/refreshing of form
-  } //can use as arrow function directly for onSubmit event
+  } //can use as arrow function directly for onSubmit event.
+
+  function expand() {
+    setExpand(true);
+  }
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          name="title"
-          placeholder="Title"
-          onChange={handleChange}
-          value={notes.title}
-        />
+      <form className="create-note">
+        {isExpand && (
+          <input
+            name="title"
+            autoFocus={isExpand}
+            placeholder="Title"
+            onChange={handleChange}
+            value={notes.title}
+          />
+        )}
         <textarea
           name="content"
-          placeholder="Take a note.."
+          onClick={expand}
           onChange={handleChange}
-          rows="3"
+          rows={isExpand ? 3 : 1}
+          placeholder="Take a note.."
           value={notes.content}
         />
-        <button type="submit">Add</button>
+        <Zoom in={isExpand}>
+          <Fab onClick={handleSubmit}>
+            <AddIcon />
+          </Fab>
+        </Zoom>
       </form>
     </div>
   );
