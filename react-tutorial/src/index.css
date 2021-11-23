@@ -10,36 +10,31 @@ body {
  * Tables
  */
 table {
-    border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 90%;
   }
   
   thead th {
-    border-bottom: 2px solid #dedede;
+    border-bottom: 8px solid #dedede;
+    
   }
-  
-  tfoot th {
-    border-top: 2px solid #dedede;
-  }
+
   
   td {
     border-bottom: 1px solid #dedede;
   }
+
+  th{
+      color: rgb(243, 53, 53);
+  }
   
   th,
   td {
+      font-size: larger;
     text-align: left;
     padding: 0.5rem;
   }
-  
-  caption {
-    padding: 1rem 0;
-    caption-side: bottom;
-    color: #ababab;
-  }
-  
   .striped-table tbody tr:nth-child(odd) {
     background-color: #f8f8f8;
   }
@@ -65,13 +60,13 @@ table {
 .button, a.button, button, [type=submit], [type=reset], [type=button] {
     -webkit-appearance: none;
     display: inline-block;
-    border: 1px solid #0366ee;
+    border: 1px solid #709edf;
     border-radius: 4px;
-    background: #0366ee;
+    background: #5f90d4;
     color: #ffffff;
     font-weight: 600;
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 1rem;
+    font-size: 0.7rem;
     text-transform: none;
     padding: 0.75rem 1.25rem;
     margin: 0 0 0.5rem 0;
@@ -89,9 +84,35 @@ table {
     text-decoration: none;
   }
   
-  .button:focus, .button:active, a.button:focus, a.button:active, button:focus, button:active, [type=submit]:focus, [type=submit]:active, [type=reset]:focus, [type=reset]:active, [type=button]:focus, [type=button]:active {
-    border: 1px solid #0250bc;
-    background: #0250bc;
+  .button:focus, .button:active, a.button:focus, a.button:active, button:focus, button:active, [type=submit]:focus, [type=submit]:active, [type=button]:focus, [type=button]:active {
+    border: 1px solid #073068;
+    background: #033985;
     color: #ffffff;
     text-decoration: none;
+  }
+
+  /**
+ * Forms
+ */
+  [type=text] {
+    display: block;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    padding: 0.75rem;
+    outline: none;
+    background: transparent;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    width: 90%;
+    max-width: 100%;
+    line-height: 1;
+  }
+
+  label {
+    font-size: larger;
+    font-weight: 800;
+    color: rgb(241, 89, 28);
+    max-width: 80%;
+    display: block;
+    margin: 2rem 0 0.5rem;
   }
