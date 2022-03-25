@@ -1,0 +1,18 @@
+{
+  "user": [
+    {
+      "name": "Ram",
+      "Location": "Bangalore",
+      "email": "ram2@gmail.com",
+      "contact": "1233212222",
+      "id": 1
+    },
+    {
+      "name": "Ram",
+      "Location": "Bangalore",
+      "email": "ram2@gmail.com",
+      "contact": "1233212222",
+      "id": 2
+    }
+  ]
+}
