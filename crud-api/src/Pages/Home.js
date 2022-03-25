@@ -89,12 +89,12 @@ const Home = () => {
                   </StyledTableCell>
                   <StyledTableCell align="center">
                     <button
-                      style={{ marginRight: "4px" }}
+                      className="delete-btn"
                       onClick={() => handledelete(user.id)}
                     >
                       <DeleteIcon />
                     </button>
-                    <button>
+                    <button className="edit-btn">
                       <EditIcon />
                     </button>
                   </StyledTableCell>
