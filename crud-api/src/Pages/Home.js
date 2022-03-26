@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { styled } from "@mui/material/styles";
@@ -41,14 +42,16 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 const useStyles = makeStyles({
   table: {
     minWidth: 900,
-    marginTop: 100,
   },
 });
 
 const Home = () => {
   const classes = useStyles();
+
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { users } = useSelector((state) => state.usersData);
+  console.log(users);
 
   useEffect(() => {
     dispatch(loadUsers());
@@ -62,47 +65,55 @@ const Home = () => {
 
   return (
     <div>
-      <TableContainer component={Paper}>
-        <Table className={classes.table} aria-label="customized table">
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell align="center">Email</StyledTableCell>
-              <StyledTableCell align="center">Contact</StyledTableCell>
-              <StyledTableCell align="center">Location</StyledTableCell>
-              <StyledTableCell align="center">Action</StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {users &&
-              users.map((user) => (
-                <StyledTableRow key={user.id}>
-                  <StyledTableCell component="th" scope="row">
-                    {user.name}
-                  </StyledTableCell>
-                  <StyledTableCell align="center">{user.email}</StyledTableCell>
-                  <StyledTableCell align="center">
-                    {user.contact}
-                  </StyledTableCell>
-                  <StyledTableCell align="center">
-                    {user.Location}
-                  </StyledTableCell>
-                  <StyledTableCell align="center">
-                    <button
-                      className="delete-btn"
-                      onClick={() => handledelete(user.id)}
-                    >
-                      <DeleteIcon />
-                    </button>
-                    <button className="edit-btn">
-                      <EditIcon />
-                    </button>
-                  </StyledTableCell>
-                </StyledTableRow>
-              ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <div className="header">Contact List</div>
+      <button className="addUser" onClick={() => navigate("/adduser")}>
+        Add new user
+      </button>
+      <div className="container-table">
+        <TableContainer className="" component={Paper}>
+          <Table className={classes.table} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Name</StyledTableCell>
+                <StyledTableCell align="center">Email</StyledTableCell>
+                <StyledTableCell align="center">Contact</StyledTableCell>
+                <StyledTableCell align="center">Location</StyledTableCell>
+                <StyledTableCell align="center">Action</StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {users &&
+                users.map((user) => (
+                  <StyledTableRow key={user.id}>
+                    <StyledTableCell component="th" scope="row">
+                      {user.name}
+                    </StyledTableCell>
+                    <StyledTableCell align="center">
+                      {user.email}
+                    </StyledTableCell>
+                    <StyledTableCell align="center">
+                      {user.contact}
+                    </StyledTableCell>
+                    <StyledTableCell align="center">
+                      {user.location}
+                    </StyledTableCell>
+                    <StyledTableCell align="center">
+                      <button
+                        className="delete-btn"
+                        onClick={() => handledelete(user.id)}
+                      >
+                        <DeleteIcon />
+                      </button>
+                      <button className="edit-btn">
+                        <EditIcon />
+                      </button>
+                    </StyledTableCell>
+                  </StyledTableRow>
+                ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </div>
   );
 };

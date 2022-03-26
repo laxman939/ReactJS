@@ -2,17 +2,38 @@
   "user": [
     {
       "name": "Ram",
-      "Location": "Bangalore",
-      "email": "ram2@gmail.com",
-      "contact": "1233212222",
-      "id": 1
-    },
-    {
-      "name": "Ram",
-      "Location": "Bangalore",
+      "location": "Bangalore",
       "email": "ram2@gmail.com",
       "contact": "1233212222",
       "id": 2
+    },
+    {
+      "name": "Ram",
+      "location": "Bangalore",
+      "email": "ram2@gmail.com",
+      "contact": "1233212222",
+      "id": 3
+    },
+    {
+      "name": "Ram",
+      "location": "Bangalore",
+      "email": "ram2@gmail.com",
+      "contact": "1233212222",
+      "id": 4
+    },
+    {
+      "name": "laxman",
+      "location": "Hyderabad",
+      "email": "laxman1@gmail.com",
+      "contact": "1234",
+      "id": 5
+    },
+    {
+      "name": "laxman",
+      "location": "hyd  ",
+      "email": "laxman1@gmail.com",
+      "contact": "1234",
+      "id": 6
     }
   ]
 }

@@ -30,7 +30,7 @@ const AddUser = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name && !location && !email && !contact) {
+    if (!name || !location || !email || !contact) {
       setError("Please fill all fields");
     } else {
       dispatch(addUser(userData));
@@ -54,7 +54,7 @@ const AddUser = () => {
         <span>Back</span>
       </button>
       <h2 className="user-heading">ADD YOUR DETAILS</h2>
-      {error && <h6>{error}</h6>}
+      {error && <h6 className="error">{error}</h6>}
       <TextField
         id="standard-basic"
         label="Name"
