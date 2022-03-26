@@ -2,6 +2,91 @@
   text-align: center;
 }
 
+.header{
+  font-size: 24px;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(138, 121, 24);
+  opacity: 1;
+}
+.header:hover{
+  opacity: 0.8;
+}
+.container-table{
+margin: 30px 3px;
+}
+
 button{
   cursor: pointer;
+}
+.delete-btn{
+  margin-right: 4px;
+  border-radius: 5px;
+}
+.delete-btn:hover{
+  background-color: rgb(156, 52, 33);
+  color: rgb(12, 11, 11);
+}
+.edit-btn{
+  margin-left: 2px;
+  border-radius: 5px;
+}
+.edit-btn:hover{
+  background-color: rgb(180, 152, 116);
+}
+
+/* New User Button*/
+.addUser{
+  display: flex;
+  margin-top: 20px !important;
+  background-color: rgb(142, 150, 150);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  margin: auto;
+  border-radius: 8px;
+  border: 2px solid rgb(100, 116, 25);
+  opacity: 0.8;
+ 
+}
+.addUser:hover{
+  box-shadow: 0px 0px 6px gray;
+  background-color: slategray;
+  color: rgb(134, 45, 6);
+  opacity: 1;
+}
+
+/* New User Details */
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 40px auto;
+  padding:0px 20px 20px 20px ;
+  border: 2px solid rgb(248, 243, 243);
+  border-radius: 6px;
+}
+.form:hover{
+  box-shadow: 0px 0px 6px gray;
+}
+.back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22%;
+  margin: 3px 3px 0px 0px;
+  padding-left: 0px;
+  text-align: center;
+  border-radius: 6px;
+  border: 2px solid rgb(218, 211, 211);
+}
+.back:hover{
+  background-color: rgb(126, 111, 90);
+}
+.user-heading{
+  text-align: center;
+}
+.error{
+  text-align: center;
+  color: rgb(221, 25, 25);
 }
