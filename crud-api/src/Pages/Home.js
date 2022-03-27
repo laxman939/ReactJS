@@ -51,7 +51,6 @@ const Home = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { users } = useSelector((state) => state.usersData);
-  console.log(users);
 
   useEffect(() => {
     dispatch(loadUsers());
@@ -104,7 +103,10 @@ const Home = () => {
                       >
                         <DeleteIcon />
                       </button>
-                      <button className="edit-btn">
+                      <button
+                        className="edit-btn"
+                        onClick={() => navigate(`edituser/${user.id}`)}
+                      >
                         <EditIcon />
                       </button>
                     </StyledTableCell>

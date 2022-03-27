@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import AddUser from "./Pages/AddUser";
+import EditUser from "./Pages/EditUser";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/adduser" element={<AddUser />} />
+        <Route path="/edituser/:id" element={<EditUser />} />
       </Routes>
     </Router>
   );
