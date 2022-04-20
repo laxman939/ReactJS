@@ -5,3 +5,7 @@ form{
   flex-direction: column;
   align-items: center;
 }
+.heading-step{
+  padding-top: 25px;
+  text-align: center;
+}
