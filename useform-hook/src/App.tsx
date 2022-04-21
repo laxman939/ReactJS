@@ -1,12 +1,12 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
 import Header from './Components/Header';
-import Result from './Pages/Result';
-import Step1 from './Pages/Step1';
-import Step2 from './Pages/Step2';
-import Step3 from './Pages/Step3';
+import Step1 from './Pages/useForm-yup';
+import FinalForm from './Pages/FinalForm';
+import { Result } from './Pages/Result';
 // import SampleForm from './SampleForm/SampleForm';
 
 function App() {
@@ -17,8 +17,7 @@ return (
 <Router>
   <Routes>
     <Route path='/' element={<Step1/>}/>
-    <Route path='/step2' element={<Step2/>}/>
-    <Route path='/step3' element={<Step3/>}/>
+    <Route path='/finalform' element={<FinalForm/>}/>
     <Route path='/result' element={<Result/>}/>
   </Routes>
 </Router>
