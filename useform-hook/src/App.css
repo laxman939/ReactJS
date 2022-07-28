@@ -1,0 +1,11 @@
+form{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.heading-step{
+  padding-top: 25px;
+  text-align: center;
+}
