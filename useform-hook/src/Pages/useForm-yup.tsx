@@ -1,8 +1,7 @@
-import { Button, Container } from "@material-ui/core";
+import { Button, Container, Typography } from "@material-ui/core";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { Typography } from "@material-ui/core";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
