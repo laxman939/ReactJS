@@ -1,0 +1,32 @@
+{
+    "user": [
+      {
+        "name": "Ram",
+        "location": "Bangalore",
+        "email": "ram2@gmail.com",
+        "contact": "1233212222",
+        "id": 2
+      },
+      {
+        "name": "Ram",
+        "location": "Bangalore",
+        "email": "ram2@gmail.com",
+        "contact": "1233212222",
+        "id": 3
+      },
+      {
+        "name": "laxman",
+        "location": "Hyderabad",
+        "email": "laxman1@gmail.com",
+        "contact": "1234",
+        "id": 5
+      },
+      {
+        "name": "laxman",
+        "location": "hyderabad",
+        "email": "laxman1@gmail.com",
+        "contact": "1234",
+        "id": 6
+      }
+    ]
+  }
