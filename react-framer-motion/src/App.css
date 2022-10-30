@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.box {
+  background-color: blueviolet;
+  width: 10rem;
+  height: 6rem;
+  margin: 120px auto;
+}
+.box h1 {
+  margin: auto;
+  text-align: center;
+}
