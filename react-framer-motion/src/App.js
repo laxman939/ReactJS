@@ -8,6 +8,10 @@ function App() {
       <Box num={2} />
       <Box num={3} />
       <Box num={4} />
+      <Box num={1} />
+      <Box num={2} />
+      <Box num={3} />
+      <Box num={4} />
     </div>
   );
 }
