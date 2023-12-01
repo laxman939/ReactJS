@@ -7,20 +7,22 @@ import SimpleForm from "./components/SimpleForm";
 import TwoInputForm from "./components/TwoInputForm";
 import ThreeInputForm from "./components/ThreeInputForm";
 import ThreeInputSpread from "./components/ThreeFormSpread"; //Simplyfying code using spread operator
+import UseCallbackUseMemo from "./components/useCallback_useMemo";
 
 //useState() is a Hook used to change or update the state(variable)
 
 function App() {
   return (
     <div>
-      <UpdateCounter />
+      {/* <UpdateCounter />
       <DisplayTime />
       <Destructure />
-      <EventHandler />
-      <SimpleForm />
-      <TwoInputForm />
+      <EventHandler /> */}
+      {/* <SimpleForm /> */}
+      {/* <TwoInputForm />
       <ThreeInputForm />
-      <ThreeInputSpread />
+      <ThreeInputSpread /> */}
+      <UseCallbackUseMemo />
     </div>
   );
 }
