@@ -1,0 +1,4 @@
+.wrapper:empty {
+  display: none;
+}
+/* :empty CSS pseudo-class to ensure the wrapper is not displayed when it's empty. */
