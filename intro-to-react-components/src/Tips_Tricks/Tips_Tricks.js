@@ -102,3 +102,38 @@ function UserPosts({ user }) {
 // 6. Use the CSS :empty pseudo-class to hide elements with no children
 
 // 7. All state and context are grouped at the top, making it easy to spot.
+
+// 8. Use functions (inline or not) to avoid polluting your scope with intermediate variables
+// The variables gradeSum and gradeCountare scoped within computeAverageGrade function.
+
+function Grade({ grades }) {
+  if (grades.length === 0) {
+    return <>No grades available.</>;
+  }
+
+  // Bad
+  // let gradeSum = 0;
+  // let gradeCount = 0;
+
+  // grades.forEach((grade) => {
+  //   gradeCount++;
+  //   gradeSum += grade;
+  // });
+
+  // const averageGrade = gradeSum / gradeCount;
+
+  // Good
+  const computeAverageGrade = () => {
+    let gradeSum = 0;
+    let gradeCount = 0;
+    grades.forEach((grade) => {
+      gradeCount++;
+      gradeSum += grade;
+    });
+    return gradeSum / gradeCount;
+  };
+
+  return <>Average Grade: {computeAverageGrade()}</>;
+}
+
+// Leverage the children props for cleaner code (and performance benefits)
