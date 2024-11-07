@@ -288,3 +288,59 @@ function UpdateTwo() {
     </div>
   );
 }
+
+// 16. Use functions in useState for lazy initialization and performance gains, as they are invoked only once.
+// Using a function in useState ensures the initial state is computed only once.
+// BAD -- We read the theme from local storage every time the component renders
+const THEME_LOCAL_STORAGE_KEY = "101-react-tips-theme";
+
+function PageWrapperOne({ children }) {
+  const [theme, setTheme] = useState(
+    localStorage.getItem(THEME_LOCAL_STORAGE_KEY) || "dark"
+  );
+
+  const handleThemeChange = (theme) => {
+    setTheme(theme);
+    localStorage.setItem(THEME_LOCAL_STORAGE_KEY, theme);
+  };
+
+  return (
+    <div
+      className="page-wrapper"
+      style={{ background: theme === "dark" ? "black" : "white" }}
+    >
+      <div className="header">
+        <button onClick={() => handleThemeChange("dark")}>Dark</button>
+        <button onClick={() => handleThemeChange("light")}>Light</button>
+      </div>
+      <div>{children}</div>
+    </div>
+  );
+}
+
+// GOOD -- We only read from the local storage when the component mounts.
+function PageWrapperTwo({ children }) {
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem(THEME_LOCAL_STORAGE_KEY) || "dark"
+  );
+
+  const handleThemeChange = (theme) => {
+    setTheme(theme);
+    localStorage.setItem(THEME_LOCAL_STORAGE_KEY, theme);
+  };
+
+  return (
+    <div
+      className="page-wrapper"
+      style={{ background: theme === "dark" ? "black" : "white" }}
+    >
+      <div className="header">
+        <button onClick={() => handleThemeChange("dark")}>Dark</button>
+        <button onClick={() => handleThemeChange("light")}>Light</button>
+      </div>
+      <div>{children}</div>
+    </div>
+  );
+}
+
+// 17. Use react context for broadly needed, static state to prevent prop drilling
