@@ -1,7 +1,8 @@
 // React Tips & Tricks for Beginers to Experts
 // --> KISS - Keep It Simple Stupid - Less code less bugs
 
-import { useCallback, useMemo, useState } from "react";
+import React, { memo, useCallback, useMemo, useState } from "react";
+import { useImmer, useImmerReducer } from "use-immer";
 
 // 1. When setting default values for props, do it while destructuring them
 function Button({
@@ -344,3 +345,117 @@ function PageWrapperTwo({ children }) {
 }
 
 // 17. Use react context for broadly needed, static state to prevent prop drilling
+
+// 37. Simplify state updates with useImmer or useImmerReducer
+export function AppTwoOne() {
+  const [{ email, password }, setState] = useImmer({
+    email: "",
+    password: "",
+  });
+  const onEmailChange = (event) => {
+    setState((draftState) => {
+      draftState.email = event.target.value;
+    });
+  };
+  const onPasswordChange = (event) => {
+    setState((draftState) => {
+      draftState.password = event.target.value;
+    });
+  };
+  // / Rest of logic
+}
+
+const initialState = { count: 0 };
+
+function reducer(draft, action) {
+  switch (action.type) {
+    case "reset":
+      return initialState;
+    case "increment":
+      return void draft.count++;
+    case "decrement":
+      return void draft.count--;
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useImmerReducer(reducer, initialState);
+  return (
+    <>
+      Count: {state.count}
+      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+    </>
+  );
+}
+
+// 38. Use Redux or redux-toolkit (or another state management solution) for complex client-side state accessed across multiple components
+//  Note: You can also consider other alternatives to Redux, such as Zustand or Recoil.
+
+// / ///    React Code Optimization       /// /
+// 40. Prevent unnecessary re-renders with memo
+
+// 42. Prefer named functions over arrow functions when declaring a memoized component
+// Arrow functions often result in generic names like _c2, making debugging and profiling more difficult.
+const ExpensiveListOne = memo(({ posts }) => {
+  /// Rest of implementation
+});
+
+// GOOD -- The component's name will be visible in DevTools.
+const ExpensiveListTwo = memo(function ExpensiveListFn({ posts }) {
+  /// Rest of implementation
+});
+
+// 43. Cache expensive computations or preserve references with useMemo
+// 00. Difference between useMemo and React.memo
+// React.memo --
+// Purpose: React.memo is a higher-order component (HOC) used to optimize the re-rendering of functional components. It is used to memoize the entire component, meaning React will skip re-rendering the component if its props haven't changed
+const MyComponentOne = React.memo((props) => {
+  // Component logic
+  return <div>{props.value}</div>;
+});
+
+// useMemo --
+//Purpose: useMemo is a React hook that memoizes a computed value so that it is recalculated only when its dependencies change. It is typically used to optimize expensive calculations or to prevent re-creating objects or functions on every render.
+function MyComponentTwo({ items }) {
+  const sortedItems = useMemo(() => {
+    return items.sort(); // expensive calculation
+  }, [items]); // re-run when 'items' changes
+
+  return <div>{sortedItems.join(", ")}</div>;
+}
+
+// In short:
+// React.memo is about optimizing components,
+// useMemo is about optimizing values or computations inside components.
+
+// 44. Use useCallback to memoize functions
+
+// 46. Leverage lazy loading and Suspense to make your apps load faster
+// When you're building your app, consider using lazy loading and Suspense for code that is:
+// 1. Expensive to load.
+// 2. Only relevant to some users (like premium features).
+// 3. Not immediately necessary for the initial user interaction.
+
+// 47. Throttle your network to simulate a slow network
+
+// 48. Use react-window or react-virtuoso to efficiently render lists
+// Never render a long list of items all at once—such as chat messages, logs, or infinite lists.
+// Doing so can cause the browser to freeze.
+// Instead, virtualize the list. This means rendering only the subset of items likely to be visible to the user.
+
+// 49. Use StrictMode to catch bugs in your components before deploying them to production
+// Using StrictMode is a proactive way to detect potential issues in your application during development.
+
+// It helps identify problems such as:
+
+// 1. Incomplete cleanup in effects, like forgetting to release resources.
+// 2. Impurities in React components, ensuring they return consistent JSX given the same inputs (props, state, and context).
+
+// 50. Install the React Developer Tools browser extension to view/edit your components and detect performance issues
+// This extension lets you:
+// 1. Visualize and delve into the details of your React components, examining everything from props to state.
+// 2. Directly modify a component's state or props to see how changes affect behavior and rendering.
+// 3. Profile your application to identify when and why components are re-rendering, helping you spot performance issues.
+// use guide -- https://www.freecodecamp.org/news/how-to-use-react-dev-tools/
