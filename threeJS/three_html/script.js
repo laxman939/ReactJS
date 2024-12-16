@@ -14,6 +14,9 @@ const material = new THREE.MeshBasicMaterial({
   //   wireframe: true,
 });
 const mesh = new THREE.Mesh(geometry, material);
+mesh.position.x = 1;
+mesh.position.y = -1;
+mesh.position.z = -1;
 scene.add(mesh);
 
 // Sizes
