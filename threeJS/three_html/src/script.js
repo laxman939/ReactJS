@@ -7,16 +7,22 @@ console.log("Three Basics", canvas);
 // Scene
 const scene = new THREE.Scene();
 
+// textureLoader
+const textureLoader = new THREE.TextureLoader();
+const colorTexture = textureLoader.load("/texture/Flappy_bg.png");
+console.log("colorTexture", colorTexture);
+
 // Object
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({
+  // map: colorTexture,
   color: "#ff0000",
   //   wireframe: true,
 });
 const mesh = new THREE.Mesh(geometry, material);
-mesh.position.x = 1;
-mesh.position.y = -1;
-mesh.position.z = -1;
+mesh.position.x = -0.6;
+mesh.position.y = 0.2;
+mesh.position.z = 0.2;
 scene.add(mesh);
 
 // Sizes
