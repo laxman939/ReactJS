@@ -61,6 +61,7 @@ renderer.setSize(aspect.width, aspect.height);
 
 // Using clock class - to overcome bad performance issues because of fps(different devices has different fps)
 // clock class
+
 const clock = new THREE.Clock();
 const animate = () => {
   // GetElapsedTime
