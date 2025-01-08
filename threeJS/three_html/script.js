@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
 // Canvas
-const canvas = document.querySelector("canvas.webgl");
+const canvas = document.querySelector(".");
 console.log("Three Basics", canvas);
 
 // Scene
