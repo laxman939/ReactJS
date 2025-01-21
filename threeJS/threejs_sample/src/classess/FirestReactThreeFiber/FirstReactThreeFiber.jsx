@@ -2,6 +2,7 @@
 import { Canvas } from "@react-three/fiber";
 import Scene from "./Scene";
 import Scene2 from "./Scene2";
+import Scene3 from "./Scene3";
 
 const FirstReactThreeFiber = () => {
   // Orthographic camera will render the scene regardless of the perspective, meaning that the size of the objects will look the same irrespective of how far away the object is from the camera
@@ -27,7 +28,8 @@ const FirstReactThreeFiber = () => {
       onCreated={creatingCanvasHandler}
     >
       {/* <Scene /> */}
-      <Scene2 />
+      {/* <Scene2 /> */}
+      <Scene3 />
     </Canvas>
   );
 };
