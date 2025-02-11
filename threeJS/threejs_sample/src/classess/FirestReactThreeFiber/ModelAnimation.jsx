@@ -3,17 +3,18 @@ import { OrbitControls } from "@react-three/drei";
 import Model from "./Model";
 import { Suspense } from "react";
 import * as THREE from "three";
+import JsxModelBike from "./JsxModelBike";
 
 const ModelAnimation = () => {
   return (
     <>
-      <ambientLight intensity={4} />
+      <ambientLight intensity={6} />
       <OrbitControls />
       {/* <mesh>
         <planeGeometry args={[4, 4]} />
         <meshBasicMaterial side={THREE.DoubleSide} color={"gray"} />
       </mesh> */}
-      <Suspense
+      {/* <Suspense
         fallback={
           // <mesh scale-y={2}>
           //   <boxGeometry />
@@ -26,8 +27,9 @@ const ModelAnimation = () => {
         }
       >
         <Model />
-      </Suspense>
+      </Suspense> */}
 
+      <JsxModelBike position={[-0.5, 0.75, 0]} scale={0.8} />
       {/* <gridHelper /> */}
     </>
   );
