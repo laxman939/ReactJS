@@ -35,7 +35,7 @@ const FirstReactThreeFiber = () => {
       {/* <Scene3 /> */}
       {/* <ParticlesScene /> */}
       <ModelAnimation />
-      <Perf position="top-left" />
+      {/* <Perf position="top-left" /> */}
     </Canvas>
   );
 };

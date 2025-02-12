@@ -5,7 +5,7 @@ import { useFrame } from "@react-three/fiber";
 
 export default function JsxModelBike(props) {
   const { nodes, materials } = useGLTF("./model/bike.gltf");
-  const mainMesh = useRef();
+  // const mainMesh = useRef();
   const firstMesh = useRef();
   const secondMesh = useRef();
   const firstMeshFront = useRef();
@@ -17,7 +17,7 @@ export default function JsxModelBike(props) {
     secondMesh.current.rotation.z -= delta * 3;
     firstMeshFront.current.rotation.y -= delta * 3;
     secondMeshFront.current.rotation.z -= delta * 3;
-    mainMesh.current.position.x += delta * 3;
+    // mainMesh.current.position.x += delta * 3;
     console.log("in frame");
   });
 
@@ -32,7 +32,7 @@ export default function JsxModelBike(props) {
       <mesh
         geometry={nodes.Bike.geometry}
         material={materials.Quadro}
-        ref={mainMesh}
+        // ref={mainMesh}
       >
         <group position={[-1.053, -1.178, 0.005]}>
           <mesh
