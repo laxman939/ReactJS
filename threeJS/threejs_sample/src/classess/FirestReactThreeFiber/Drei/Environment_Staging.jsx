@@ -1,5 +1,11 @@
 /* eslint-disable react/no-unknown-property */
-import { OrbitControls, Sparkles, useHelper } from "@react-three/drei";
+import {
+  Cloud,
+  OrbitControls,
+  Sparkles,
+  Stars,
+  useHelper,
+} from "@react-three/drei";
 import { useRef } from "react";
 import * as THREE from "three";
 
@@ -20,13 +26,33 @@ const Environment_Staging = () => {
         <boxGeometry />
         <meshStandardMaterial color="#C7CAC7" />
       </mesh> */}
-      <Sparkles
+
+      {/* <Sparkles
         count={400}
         speed={2}
         opacity={3}
         color="#68c2ED"
         scale={[10, 10, 10]}
         size={2}
+      /> */}
+
+      <Stars
+        radius={20}
+        depth={50}
+        count={4000}
+        factor={4}
+        saturation={0}
+        fade
+        speed={1}
+      />
+
+      <Cloud
+        opacity={1}
+        speed={0.2}
+        width={100}
+        depth={1.5}
+        segments={10}
+        depthTest={false}
       />
 
       <mesh position-y={-1} rotation-x={-Math.PI * 0.5} receiveShadow>
