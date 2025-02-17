@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import {
   Cloud,
+  Environment,
   OrbitControls,
   Sky,
   Sparkles,
@@ -23,16 +24,20 @@ const Environment_Staging = () => {
     },
   });
 
+  const { meshIntensity } = useControls("Mesh Intensity", {
+    meshIntensity: { value: 1, min: 0, max: 5 },
+  });
+
   return (
     <>
       <OrbitControls />
       <ambientLight />
-      <directionalLight ref={lightRef} castShadow />
+      {/* <directionalLight ref={lightRef} castShadow /> */}
       {/* <directionalLight position={[0, 1, 0]} color="white" intensity={4} /> */}
 
       {/* <mesh castShadow>
         <boxGeometry />
-        <meshStandardMaterial color="#C7CAC7" />
+        <meshStandardMaterial color="#C7CAC7" envMapIntensity={meshIntensity} />
       </mesh> */}
 
       {/* <Sparkles
@@ -63,7 +68,21 @@ const Environment_Staging = () => {
         depthTest={false}
       /> */}
 
-      <Sky sunPosition={sunPosition} />
+      {/* <Sky sunPosition={sunPosition} /> */}
+
+      {/* Environment can be done in two ways */}
+      {/* 1- Using images & 2- using HDR file (polyhaven.com)*/}
+      <Environment
+        background
+        files={[
+          "./envMap/px.png",
+          "./envMap/nx.png",
+          "./envMap/py.png",
+          "./envMap/ny.png",
+          "./envMap/pz.png",
+          "./envMap/nz.png",
+        ]}
+      />
 
       <mesh position-y={-1} rotation-x={-Math.PI * 0.5} receiveShadow>
         <planeGeometry args={[2, 2]} />
