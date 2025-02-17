@@ -2,18 +2,26 @@
 import {
   Cloud,
   OrbitControls,
+  Sky,
   Sparkles,
   Stars,
   useHelper,
 } from "@react-three/drei";
 import { useRef } from "react";
 import * as THREE from "three";
+import { useControls } from "leva";
 
 // Helpers to know the direction of light
 
 const Environment_Staging = () => {
   const lightRef = useRef();
   //   useHelper(lightRef, THREE.DirectionalLightHelper, 1);
+
+  const { sunPosition } = useControls("sky", {
+    sunPosition: {
+      value: [0, 1, 0],
+    },
+  });
 
   return (
     <>
@@ -36,7 +44,7 @@ const Environment_Staging = () => {
         size={2}
       /> */}
 
-      <Stars
+      {/* <Stars
         radius={20}
         depth={50}
         count={4000}
@@ -53,7 +61,9 @@ const Environment_Staging = () => {
         depth={1.5}
         segments={10}
         depthTest={false}
-      />
+      /> */}
+
+      <Sky sunPosition={sunPosition} />
 
       <mesh position-y={-1} rotation-x={-Math.PI * 0.5} receiveShadow>
         <planeGeometry args={[2, 2]} />
