@@ -23,13 +23,13 @@ const FirstReactThreeFiber = () => {
       // }}
       // orthographic
       shadows // To activate shadows
-      // camera={{
-      //   fov: 75,
-      //   near: 0.1,
-      //   far: 100,
-      //   // zoom: 80,
-      //   position: [1, 3, 6],
-      // }}
+      camera={{
+        fov: 75,
+        near: 0.1,
+        far: 100,
+        // zoom: 80,
+        position: [1, 3, 6],
+      }}
       // onCreated={creatingCanvasHandler}
     >
       {/* <Scene /> */}
