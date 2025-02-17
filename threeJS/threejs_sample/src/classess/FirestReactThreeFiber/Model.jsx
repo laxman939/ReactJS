@@ -11,7 +11,7 @@ const DogModel = () => {
   const model = useGLTF("./model/dog.glb");
   const animations = useAnimations(model.animations, model.scene);
 
-  console.log(model, "model", animations);
+  //   console.log(model, "model", animations);
 
   useEffect(() => {
     // animations.actions.Embarrassed.play();
