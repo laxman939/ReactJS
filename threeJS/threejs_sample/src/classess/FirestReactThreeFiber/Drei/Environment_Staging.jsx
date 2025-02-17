@@ -29,6 +29,12 @@ const Environment_Staging = () => {
     meshIntensity: { value: 1, min: 0, max: 5 },
   });
 
+  const { height, radius, scale } = useControls("ground", {
+    height: { value: 6, min: 0, max: 20 },
+    radius: { value: 60, min: 0, max: 100 },
+    scale: { value: 70, min: 0, max: 100 },
+  });
+
   return (
     <>
       <OrbitControls />
@@ -36,7 +42,7 @@ const Environment_Staging = () => {
       {/* <directionalLight ref={lightRef} castShadow /> */}
       {/* <directionalLight position={[0, 1, 0]} color="white" intensity={4} /> */}
 
-      <mesh castShadow>
+      <mesh castShadow position-y={2}>
         <boxGeometry />
         <meshStandardMaterial color="#C7CAC7" envMapIntensity={meshIntensity} />
       </mesh>
@@ -84,7 +90,8 @@ const Environment_Staging = () => {
         //   "./envMap/nz.png",
         // ]}
 
-        // files={"./envMap/3.hdr"}
+        files={"./envMap/3.hdr"}
+        ground={{ height: height, radius: radius, scale: scale }}
       >
         {/* 1. Lighting using mesh */}
         {/* <mesh position-z={-1} scale={5}>
@@ -93,13 +100,13 @@ const Environment_Staging = () => {
         </mesh> */}
 
         {/*2. Using Lightformer */}
-        <Lightformer color="orange" position-z={-1} scale={5} intensity={5} />
+        {/* <Lightformer color="orange" position-z={-1} scale={5} intensity={5} /> */}
       </Environment>
 
       <mesh receiveShadow position-y={-1} rotation-x={-Math.PI * 0.5}>
         {/* <boxGeometry args={[1, 1]} /> */}
         <planeGeometry args={[4, 4]} />
-        <meshStandardMaterial color="#CC3941" />
+        <meshStandardMaterial color="#CC3941" side={THREE.DoubleSide} />
       </mesh>
     </>
   );
