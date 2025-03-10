@@ -8,6 +8,7 @@ import ModelAnimation from "./ModelAnimation";
 import { Perf } from "r3f-perf";
 import Environment_Staging from "./Drei/Environment_Staging";
 import Camera from "./Drei/Camera";
+import Controls from "./Drei/Controls";
 
 const FirstReactThreeFiber = () => {
   // Orthographic camera will render the scene regardless of the perspective, meaning that the size of the objects will look the same irrespective of how far away the object is from the camera
@@ -39,7 +40,8 @@ const FirstReactThreeFiber = () => {
       {/* <ParticlesScene /> */}
       {/* <ModelAnimation /> */}
       {/* <Environment_Staging /> */}
-      <Camera />
+      {/* <Camera /> */}
+      <Controls />
 
       {/* <Perf position="top-left" /> */}
     </Canvas>
