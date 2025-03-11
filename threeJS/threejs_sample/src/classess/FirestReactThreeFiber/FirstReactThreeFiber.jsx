@@ -40,11 +40,11 @@ const FirstReactThreeFiber = () => {
       {/* <Scene2 /> */}
       {/* <Scene3 /> */}
       {/* <ParticlesScene /> */}
-      {/* <ModelAnimation /> */}
+      <ModelAnimation />
       {/* <Environment_Staging /> */}
       {/* <Camera /> */}
       {/* <Controls /> */}
-      <Html_3dText />
+      {/* <Html_3dText /> */}
 
       {/* <Perf position="top-left" /> */}
     </Canvas>

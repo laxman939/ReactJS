@@ -5,7 +5,7 @@ import { useAnimations, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useEffect } from "react";
 
-const DogModel = () => {
+const DogModel = ({ setPlay, play }) => {
   //   const model = useLoader(GLTFLoader, "./model/dog.glb");
   // (or) With drei
   const model = useGLTF("./model/dog.glb");
@@ -15,17 +15,22 @@ const DogModel = () => {
 
   useEffect(() => {
     // animations.actions.Embarrassed.play();
-    animations.actions.ClickedOn.play();
+    // animations.actions.ClickedOn.play();
     // animations.actions.Idle.play();
     // animations.actions.Show.play();
     // animations.actions.Travel.play();
     // animations.actions.Writing.play();
-    // animations.actions.Congratulate.play();
+    animations.actions.Congratulate.play();
   }, []);
 
   return (
     <>
-      <primitive scale={1.6} position-y={-0.9} object={model.scene} />
+      <primitive
+        scale={1.6}
+        position-y={-0.9}
+        object={model.scene}
+        onClick={() => setPlay(!play)}
+      />
     </>
   );
 };
