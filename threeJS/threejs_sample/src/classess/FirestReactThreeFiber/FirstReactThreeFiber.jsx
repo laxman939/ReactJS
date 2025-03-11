@@ -9,6 +9,7 @@ import { Perf } from "r3f-perf";
 import Environment_Staging from "./Drei/Environment_Staging";
 import Camera from "./Drei/Camera";
 import Controls from "./Drei/Controls";
+import Html_3dText from "./Drei/html_3DText/Html_3dText";
 
 const FirstReactThreeFiber = () => {
   // Orthographic camera will render the scene regardless of the perspective, meaning that the size of the objects will look the same irrespective of how far away the object is from the camera
@@ -42,7 +43,8 @@ const FirstReactThreeFiber = () => {
       {/* <ModelAnimation /> */}
       {/* <Environment_Staging /> */}
       {/* <Camera /> */}
-      <Controls />
+      {/* <Controls /> */}
+      <Html_3dText />
 
       {/* <Perf position="top-left" /> */}
     </Canvas>
