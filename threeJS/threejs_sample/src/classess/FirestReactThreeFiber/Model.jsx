@@ -15,9 +15,9 @@ const DogModel = () => {
 
   useEffect(() => {
     // animations.actions.Embarrassed.play();
-    // animations.actions.ClickedOn.play();
+    animations.actions.ClickedOn.play();
     // animations.actions.Idle.play();
-    animations.actions.Show.play();
+    // animations.actions.Show.play();
     // animations.actions.Travel.play();
     // animations.actions.Writing.play();
     // animations.actions.Congratulate.play();

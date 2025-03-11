@@ -16,7 +16,7 @@ const ModelAnimation = () => {
         <planeGeometry args={[4, 4]} />
         <meshBasicMaterial side={THREE.DoubleSide} color={"gray"} />
       </mesh> */}
-      <Suspense
+      {/* <Suspense
         fallback={
           // <mesh scale-y={2}>
           //   <boxGeometry />
@@ -29,9 +29,9 @@ const ModelAnimation = () => {
         }
       >
         <DogModel />
-      </Suspense>
+      </Suspense> */}
 
-      {/* <JsxModelBike position={[-0.5, 0.75, 0]} scale={0.8} /> */}
+      <JsxModelBike position={[-0.5, 0.75, 0]} scale={0.8} />
       {/* <gridHelper /> */}
     </>
   );

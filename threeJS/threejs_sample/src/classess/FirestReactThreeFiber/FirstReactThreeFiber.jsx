@@ -19,20 +19,21 @@ const FirstReactThreeFiber = () => {
 
   return (
     <Canvas
-    // gl={{
-    //   antialias: true,
-    //   alpha: true,
-    // }}
-    // orthographic
-    // shadows // To activate shadows
-    // camera={{
-    //   fov: 45,
-    //   near: 0.1,
-    //   far: 100,
-    //   // zoom: 80,
-    //   position: [0, 2, 7],
-    // }}
-    // onCreated={creatingCanvasHandler}
+      // gl={{
+      //   antialias: true,
+      //   alpha: true,
+      // }}
+      // orthographic
+      // shadows // To activate shadows
+      // camera={{
+      //   fov: 45,
+      //   near: 0.1,
+      //   far: 100,
+      //   // zoom: 80,
+      //   position: [0, 2, 7],
+      // }}
+      // onCreated={creatingCanvasHandler}
+      camera={{ position: [0, 0, 5], fov: 75 }}
     >
       {/* <Scene /> */}
       {/* <Scene2 /> */}
