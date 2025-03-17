@@ -11,6 +11,7 @@ import Camera from "./Drei/Camera";
 import Controls from "./Drei/Controls";
 import Html_3dText from "./Drei/html_3DText/Html_3dText";
 import Shaders from "./Drei/shaders/Shaders";
+import MeshPortalMaterials from "./Drei/MeshPortalMaterials";
 
 const FirstReactThreeFiber = () => {
   // Orthographic camera will render the scene regardless of the perspective, meaning that the size of the objects will look the same irrespective of how far away the object is from the camera
@@ -46,7 +47,8 @@ const FirstReactThreeFiber = () => {
       {/* <Camera /> */}
       {/* <Controls /> */}
       {/* <Html_3dText /> */}
-      <Shaders />
+      {/* <Shaders /> */}
+      <MeshPortalMaterials />
 
       {/* <Perf position="top-left" /> */}
     </Canvas>
