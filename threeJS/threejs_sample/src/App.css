@@ -8,12 +8,12 @@ body,
   height: 100%;
   overflow: hidden;
 }
-/* body {
-  background-color: #232222;
-} */
 body {
-  background-color: rgb(216, 214, 214);
+  background-color: #232222;
 }
+/* body {
+  background-color: rgb(216, 214, 214);
+} */
 .container {
   height: 100vh;
   overflow: auto;

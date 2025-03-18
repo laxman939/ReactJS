@@ -1,0 +1,7 @@
+https://docs.pmnd.rs/ -- Documentaion for all the libraries
+https://r3f.docs.pmnd.rs/getting-started/examples -- Animated examples
+https://threejs.org/editor/  -- ThreeJS editor
+https://market.pmnd.rs/ -- models
+https://r3f.docs.pmnd.rs/getting-started/your-first-scene ---> React-three-fiber(r3f) is a React renderer for three.js.
+npm i @react-spring/three -- three/web/..
+https://codesandbox.io/p/sandbox/9keg6 -- laptop animation example - reference for the portfolio
