@@ -13,6 +13,7 @@ import Html_3dText from "./Drei/html_3DText/Html_3dText";
 import Shaders from "./Drei/shaders/Shaders";
 import MeshPortalMaterials from "./Drei/MeshPortalMaterials";
 import ImperativeAPI from "./Spring/ImperativeAPI";
+import Props from "./Spring/Props";
 
 const FirstReactThreeFiber = () => {
   // Orthographic camera will render the scene regardless of the perspective, meaning that the size of the objects will look the same irrespective of how far away the object is from the camera
@@ -29,15 +30,15 @@ const FirstReactThreeFiber = () => {
       // }}
       // orthographic
       // shadows // To activate shadows
-      // camera={{
-      //   fov: 45,
-      //   near: 0.1,
-      //   far: 100,
-      //   // zoom: 80,
-      //   position: [0, 2, 7],
-      // }}
+      camera={{
+        fov: 35,
+        near: 0.1,
+        far: 100,
+        // zoom: 80,
+        position: [0, 0, 20],
+      }} // Require for props
       // onCreated={creatingCanvasHandler}
-      camera={{ position: [0, 0, 5], fov: 75 }}
+      // camera={{ position: [0, 0, 5], fov: 75 }}
     >
       {/* <Scene /> */}
       {/* <Scene2 /> */}
@@ -52,7 +53,8 @@ const FirstReactThreeFiber = () => {
       {/* <MeshPortalMaterials /> */}
 
       {/* React Spring */}
-      <ImperativeAPI />
+      {/* <ImperativeAPI /> */}
+      <Props />
 
       {/* <Perf position="top-left" /> */}
     </Canvas>
