@@ -14,6 +14,9 @@ import Shaders from "./Drei/shaders/Shaders";
 import MeshPortalMaterials from "./Drei/MeshPortalMaterials";
 import ImperativeAPI from "./Spring/ImperativeAPI";
 import Props from "./Spring/Props";
+import SpringRefProp from "./Spring/SpringRefProp";
+import { useState } from "react";
+import UseSpringsProp from "./Spring/UseSpringsProp";
 
 const FirstReactThreeFiber = () => {
   // Orthographic camera will render the scene regardless of the perspective, meaning that the size of the objects will look the same irrespective of how far away the object is from the camera
@@ -24,6 +27,12 @@ const FirstReactThreeFiber = () => {
 
   return (
     <Canvas
+      // onPointerMove={(e) => {
+      //   setCursorPosition({
+      //     x: e.clientX,
+      //     y: e.clientY,
+      //   });
+      // }}
       // gl={{
       //   antialias: true,
       //   alpha: true,
@@ -54,7 +63,9 @@ const FirstReactThreeFiber = () => {
 
       {/* React Spring */}
       {/* <ImperativeAPI /> */}
-      <Props />
+      {/* <Props /> */}
+      {/* <SpringRefProp /> */}
+      {<UseSpringsProp />}
 
       {/* <Perf position="top-left" /> */}
     </Canvas>

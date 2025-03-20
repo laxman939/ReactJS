@@ -37,7 +37,8 @@ const Props = () => {
     onReset: () => console.log("onReset"),
     onPause: () => console.log("onPause"),
     onResume: () => console.log("onResume"),
-    onChange: () => console.log("change", y.animation.values[0]),
+    // onChange: () => console.log("change", y.animation.values[0]),
+    onChange: () => console.log("change", console.log(y.get(), "y")),
   });
 
   return (
