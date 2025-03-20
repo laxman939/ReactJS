@@ -26,6 +26,7 @@ const UseSpringsProp = () => {
   const boxRef = useRef();
   const boxRefs = useRef([]); // An array to hold refs for each box
 
+  //   If we take function as 2nd argument it will return array of two elements(Spring & API)
   const springs = useSprings(
     items.length,
     items.map((item) => ({
