@@ -6,6 +6,6 @@ https://r3f.docs.pmnd.rs/getting-started/your-first-scene ---> React-three-fiber
 npm i @react-spring/three -- three/web/..
 https://codesandbox.io/p/sandbox/9keg6 -- laptop animation example - reference for the portfolio
 https://react-spring-visualizer.com/ --- The missing visualizer for your react-spring UI animations.
-
+https://github.com/pmndrs/react-three-rapier 
 
 -- focus on rerenderings
