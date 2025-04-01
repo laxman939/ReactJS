@@ -3,6 +3,7 @@ import { OrbitControls } from "@react-three/drei";
 import HelloPhysics from "./HelloPhysics";
 import Colliders from "./Colliders";
 import RigidBodyMethods from "./RigidBodyMethods";
+import Mass from "./Mass";
 
 const PhysicsScene = () => {
   return (
@@ -14,7 +15,8 @@ const PhysicsScene = () => {
 
       {/* <HelloPhysics /> */}
       {/* <Colliders /> */}
-      <RigidBodyMethods />
+      {/* <RigidBodyMethods /> */}
+      <Mass />
     </>
   );
 };
