@@ -5,6 +5,7 @@ import Colliders from "./Colliders";
 import RigidBodyMethods from "./RigidBodyMethods";
 import Mass from "./Mass";
 import TypesGame from "./TypesGame";
+import InstancedMesh from "./InstancedMesh";
 
 const PhysicsScene = () => {
   return (
@@ -18,7 +19,7 @@ const PhysicsScene = () => {
       {/* <Colliders /> */}
       {/* <RigidBodyMethods /> */}
       {/* <Mass /> */}
-      <KeyboardControls
+      {/* <KeyboardControls
         map={[
           { name: "forward", keys: ["ArrowUp", "KeyW"] },
           { name: "backward", keys: ["ArrowDown", "KeyS"] },
@@ -28,7 +29,8 @@ const PhysicsScene = () => {
         ]}
       >
         <TypesGame />
-      </KeyboardControls>
+      </KeyboardControls> */}
+      <InstancedMesh />
     </>
   );
 };
