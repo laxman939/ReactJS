@@ -10,7 +10,7 @@ const MainPhysics = () => {
           fov: 45,
           near: 0.1,
           far: 100,
-          position: [3, 3, 7],
+          position: [0, 7, 20],
         }}
       >
         <PhysicsScene />

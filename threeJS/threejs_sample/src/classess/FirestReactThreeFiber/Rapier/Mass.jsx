@@ -45,9 +45,7 @@ const Mass = () => {
           </mesh>
         </RigidBody>
 
-        <RigidBody name="Bally McBallFace" ref={cubeRefSec}>
-          {" "}
-          mass={130}
+        <RigidBody name="Bally McBallFace" ref={cubeRefSec} mass={130}>
           <mesh
             castShadow
             position={[1, 1.5, 0]}

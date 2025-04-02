@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unknown-property */
-import { OrbitControls } from "@react-three/drei";
+import { KeyboardControls, OrbitControls } from "@react-three/drei";
 import HelloPhysics from "./HelloPhysics";
 import Colliders from "./Colliders";
 import RigidBodyMethods from "./RigidBodyMethods";
 import Mass from "./Mass";
+import TypesGame from "./TypesGame";
 
 const PhysicsScene = () => {
   return (
@@ -16,7 +17,18 @@ const PhysicsScene = () => {
       {/* <HelloPhysics /> */}
       {/* <Colliders /> */}
       {/* <RigidBodyMethods /> */}
-      <Mass />
+      {/* <Mass /> */}
+      <KeyboardControls
+        map={[
+          { name: "forward", keys: ["ArrowUp", "KeyW"] },
+          { name: "backward", keys: ["ArrowDown", "KeyS"] },
+          { name: "leftward", keys: ["ArrowLeft", "KeyA"] },
+          { name: "rightward", keys: ["ArrowRight", "KeyD"] },
+          { name: "jump", keys: ["Space"] },
+        ]}
+      >
+        <TypesGame />
+      </KeyboardControls>
     </>
   );
 };
