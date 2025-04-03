@@ -6,6 +6,7 @@ import RigidBodyMethods from "./RigidBodyMethods";
 import Mass from "./Mass";
 import TypesGame from "./TypesGame";
 import InstancedMesh from "./InstancedMesh";
+import SensorGame from "./SensorGame";
 
 const PhysicsScene = () => {
   return (
@@ -30,7 +31,8 @@ const PhysicsScene = () => {
       >
         <TypesGame />
       </KeyboardControls> */}
-      <InstancedMesh />
+      {/* <InstancedMesh /> */}
+      <SensorGame />
     </>
   );
 };
